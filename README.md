@@ -72,9 +72,21 @@ Comme on peut le voir dans les tableaux au dessus nous avons choisis de concerve
 L'objectif du tuning était de dépasser les performances du modèle de base (Baseline) en ajustant finement les paramètres structurels de la forêt aléatoire. Pour ce faire, nous avons utilisé la méthode GridSearchCV, qui consiste à tester de manière exhaustive toutes les combinaisons possibles au sein d'un espace de recherche prédéfini. Cette recherche a été couplée à une validation croisée à 5 plis (5-fold CV) afin de garantir que les améliorations de performance soient statistiquement robustes et non dues au hasard du découpage des données. 
 L'optimisation a permis d'ajuster le comportement du modèle face au déséquilibre des classes (75% de revenus bas vs 25% de revenus hauts). En utilisant le score F1 comme métrique de référence, les résultats finaux montrent une évolution stratégique. Evolution du modèle de 60 à 74% ainsi qu'une amélioration du score f1 0.65 à 0.7 puis une baisse du compromis de précision  passant de 0.72 à 0.67.
 Ce tuning a transformé un modèle initialement trop conservateur en un outil de prédiction beaucoup plus sensible et efficace pour détecter la classe minoritaire. Le modèle final est désormais mieux équilibré, offrant une capacité de détection des hauts revenus nettement supérieure tout en conservant une précision globale très satisfaisante de 85% sur l'ensemble du dataset.
-### Section analyse d’erreurs
-### Explication de la structure du projet
 ### Limites / pistes d’amélioration
 Les limites du projet sont le dataset car il concerne des anciennes données qui ne sont peut etre plus à jours (1994). Beaucoup d'information se base sur d'ancien préjugé et refaire la même analyse avec l'emergence de nos nouveaux métiers serait très interressant et donnerai surement des résultats très différents de ceux obtenus. 
 
 L'essaie d'autre modèle peut aussi être une piste intéressante pour continuer nos tests et trouver un meilleurs score de précision 
+
+### Structure du projet 
+```
+- data
+- - processed
+- - raw
+- figures
+- model
+- notebooks
+- src
+.gitignore
+README.md
+requirements.txt
+``` 
