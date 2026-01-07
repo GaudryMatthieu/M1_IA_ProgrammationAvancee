@@ -1,6 +1,13 @@
-# Titre du projet + description courte
-### Lien du dataset + ce que vous prédisez / analysez
+# Adult Census Income Prediction
+Ce projet vise à prédire si un individu gagne plus de 50 000 $ par an en se basant sur des données socio-économiques issues du recensement de 1994.
+
 Le dataset que nous avons choisi est "Adult Census Income" vous pouvez le retrouver sur ce lien (https://www.kaggle.com/datasets/uciml/adult-census-income/data)
+
+**Objectif :** Prédire la variable cible income (classification binaire : <=50K ou >50K).
+* **Type de problème :** Classification supervisée sur des données tabulaires mixtes.
+
+Version de Python : 3.12.0
+
 ``` python
 import kagglehub
 import pandas as pd
@@ -22,13 +29,20 @@ df = pd.read_csv(file_path)
 # 4. Affichage des premières lignes pour faire nos prmeier tests sur ce dataset
 print(df.head())
 ```
-### Type de problème (classification/régression/etc.)
 ### Installation et environnement
-##### Version de Python
+Créer un environnement virtuel Python puis installer les dépendances donnée dans le requirements.txt
 ##### Instructions d’installation
+``` bash
+python -m venv venv
+venv\Scripts\activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
 ### Reproduire les résultats
 ##### Ordre exact d’exécution des notebooks/scripts
-### Résumé EDA (puces + figures clés)
+Pour éxecuter les notebooks il suffit de suivre les numéros que nous avons mis en amont de chaque numéro de fichier 
+### Résumé EDA
 ### Résumé de modélisation
 ##### Modèles entraînés
 ##### Tableau des métriques
